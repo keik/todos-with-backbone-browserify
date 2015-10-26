@@ -1,0 +1,27 @@
+{
+  "name": "todos-with-backbone-browserify",
+  "version": "0.0.0",
+  "description": "Todos powered by Backbone and Browserify",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keik/todos-with-backbone-browserify.git"
+  },
+  "keywords": [
+    "backbone",
+    "browserify",
+    "todos"
+  ],
+  "author": {
+    "name": "keik",
+    "email": "k4t0.kei@gmail.com",
+    "url": "keik.info"
+  },
+  "license": "MIT",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/keik/todos-with-backbone-browserify/issues"
+  }
+}
