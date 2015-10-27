@@ -1,7 +1,10 @@
-build: node_modules clean build-html build-js build-less
+build: node_modules clean test build-html build-js build-less
 
 clean:
 	@rm -rf dist
+
+test:
+	@node_modules/.bin/mocha --compilers js:babel/register test/**/*.test.js
 
 build-html: node_modules
 	@mkdir -p dist && cp src/*.html dist
@@ -25,4 +28,4 @@ watch: node_modules
 node_modules: package.json
 	@npm install
 
-.PHONY: all clean build watch
+.PHONY: all clean test build build-html build-js build-less lint watch
