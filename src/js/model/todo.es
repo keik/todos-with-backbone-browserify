@@ -12,6 +12,12 @@ module.exports = Backbone.Model.extend({
 
   initialize: function() {
     d('#initialize')
+  },
+
+  toggle: function() {
+    d('#toggle')
+
+    this.save({completed: !this.get('completed')})
   }
 
 })
