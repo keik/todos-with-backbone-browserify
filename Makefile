@@ -1,4 +1,7 @@
-build: node_modules build-html build-js build-less
+build: node_modules clean build-html build-js build-less
+
+clean:
+	@rm -rf dist
 
 build-html: node_modules
 	@mkdir -p dist && cp src/*.html dist
@@ -9,9 +12,6 @@ build-js: node_modules lint
 
 build-less: node_modules
 	@mkdir -p dist && node_modules/.bin/lessc src/less/main.less --clean-css > dist/bundle.css
-
-clean:
-	@rm -rf dist
 
 lint: node_modules
 	@node_modules/.bin/eslint 'src/js/**/*.es'
