@@ -1,15 +1,13 @@
 let d = require('debug')('view/todo')
 d('loaded')
 
-let Backbone = require('backbone'),
-    _ = require('underscore'),
-    $ = require('jquery')
+let Backbone = require('backbone')
 
 module.exports = Backbone.View.extend({
 
   tagName: 'li',
 
-  template: _.template($('#item-template').html()),
+  template: require('../templates/todo.html'),
 
   events: {
     'click .complete': 'onClickComplete',
