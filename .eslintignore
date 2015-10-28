@@ -1,7 +1,1 @@
-node_modules
-bower_components
-public
-**/_*
-tests
-tmp
-*.sqlite
+
